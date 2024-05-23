@@ -1,0 +1,47 @@
+MessageDigest(MD5):
+	Str: flopper
+	Str as bytes: [102, 108, 111, 112, 112, 101, 114]
+	Hashed str as bytes: [-6, -98, -49, -29, 38, -10, -118, 2, -102, 24, 123, 95, 17, 121, 81, -119]
+
+MessageDigest(SHA-1):
+	Str: flopper
+	Str as bytes: [102, 108, 111, 112, 112, 101, 114]
+	Hashed str as bytes: [-105, 109, -13, -28, -36, 104, 84, 109, 68, 27, 95, -53, -97, -100, -94, 6, 23, 59, 13, -115]
+
+MessageDigest(SHA-256):
+	Str: flopper
+	Str as bytes: [102, 108, 111, 112, 112, 101, 114]
+	Hashed str as bytes: [-58, 15, 121, -79, -53, -21, -61, 41, 121, -44, 126, 62, 17, 124, -122, 104, -65, -13, -23, -95, -34, -44, 63, -83, -47, -110, 87, -97, 40, 45, 119, 97]
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+SecureRandom + MessageDigest(MD5):
+	Password: .flopper123/?
+	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
+	Hashed Password as bytes: [41, 2, 29, -46, 4, 49, 88, 59, -76, -91, -63, 44, 112, -14, -20, -11]
+
+SecureRandom + MessageDigest(SHA-256):
+	Password: .flopper123/?
+	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
+	Hashed Password as bytes: [53, 68, 117, 118, -5, -2, 105, -21, 82, -84, 118, 116, -23, -16, -100, -87, -98, -88, 59, 12, 40, 126, 121, 113, 11, -74, 20, 32, 86, 51, 1, 53]
+
+SecureRandom + MessageDigest(SHA-512):
+	Password: .flopper123/?
+	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
+	Hashed Password as bytes: [22, -48, 74, 42, -89, 51, 60, 79, 120, 120, -74, -102, -115, 15, -65, -85, 99, 117, -31, 26, -74, -22, -12, -24, -38, -49, 84, -95, -92, 26, 127, 12, 60, 3, 83, -56, -20, 89, 127, 31, -112, 32, 67, -64, 74, -39, -25, 14, 55, -20, -32, -44, -3, 68, 18, -122, -113, -78, 85, -15, -104, 12, 53, 116]
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+(Voss, 1, Litre) -> Voss
+(San Pellegrino, 1, Litre) -> San Pellegrino
+(Smartwater, 1, Litre) -> Smartwater(Evian, 1, Litre) -> Evian
+
+
+(San Pellegrino, 1, Litre) -> Smartwater
+(Evian, 1, Litre) -> Evian(Voss, 1, Litre) -> Voss
+
+
+Hashing in CorrectWatterBottle: 
+	~Default hashing is handled by java.
+	~Returns int value of the first char of the water brand.
+	~eg: Hash("Smartwater") == Hash("San Pellegrino").
