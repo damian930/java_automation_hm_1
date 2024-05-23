@@ -18,30 +18,30 @@ MessageDigest(SHA-256):
 SecureRandom + MessageDigest(MD5):
 	Password: .flopper123/?
 	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
-	Hashed Password as bytes: [41, 2, 29, -46, 4, 49, 88, 59, -76, -91, -63, 44, 112, -14, -20, -11]
+	Hashed Password as bytes: [-30, -50, -101, 112, 103, 103, 68, 48, 71, -85, 105, 77, -16, 2, 79, 87]
 
 SecureRandom + MessageDigest(SHA-256):
 	Password: .flopper123/?
 	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
-	Hashed Password as bytes: [53, 68, 117, 118, -5, -2, 105, -21, 82, -84, 118, 116, -23, -16, -100, -87, -98, -88, 59, 12, 40, 126, 121, 113, 11, -74, 20, 32, 86, 51, 1, 53]
+	Hashed Password as bytes: [-54, 70, 78, -73, 21, -62, -9, 52, -105, 24, 23, -92, -73, -126, -43, 44, 72, 61, 21, -75, 106, 90, 59, -70, -43, -113, -13, 85, 113, -118, -107, -31]
 
 SecureRandom + MessageDigest(SHA-512):
 	Password: .flopper123/?
 	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
-	Hashed Password as bytes: [22, -48, 74, 42, -89, 51, 60, 79, 120, 120, -74, -102, -115, 15, -65, -85, 99, 117, -31, 26, -74, -22, -12, -24, -38, -49, 84, -95, -92, 26, 127, 12, 60, 3, 83, -56, -20, 89, 127, 31, -112, 32, 67, -64, 74, -39, -25, 14, 55, -20, -32, -44, -3, 68, 18, -122, -113, -78, 85, -15, -104, 12, 53, 116]
+	Hashed Password as bytes: [101, 8, 100, 75, -85, -78, -108, -70, 3, 77, 116, 92, 5, -46, 54, -113, 24, -28, 31, -31, 35, 28, -2, -20, 73, 28, 117, -126, 3, -41, 47, 66, -20, 50, -30, -73, -34, -39, -20, -29, 19, -9, -86, 56, 20, 80, 106, 0, -45, 125, -101, 28, -39, 69, -1, -9, -43, -78, 110, 42, 81, -39, -26, -1]
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
 (Voss, 1, Litre) -> Voss
 (San Pellegrino, 1, Litre) -> San Pellegrino
-(Smartwater, 1, Litre) -> Smartwater(Evian, 1, Litre) -> Evian
-
+(Smartwater, 1, Litre) -> Smartwater
+(Evian, 1, Litre) -> Evian
 
 (San Pellegrino, 1, Litre) -> Smartwater
-(Evian, 1, Litre) -> Evian(Voss, 1, Litre) -> Voss
-
+(Evian, 1, Litre) -> Evian
+(Voss, 1, Litre) -> Voss
 
 Hashing in CorrectWatterBottle: 
 	~Default hashing is handled by java.
 	~Returns int value of the first char of the water brand.
-	~eg: Hash("Smartwater") == Hash("San Pellegrino").
+	~eg: Hash("Smartwater") == Hash("San Pellegrino") == 'S'.

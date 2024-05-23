@@ -68,7 +68,7 @@ public class Main {
         int i = 0;
         for (WaterBottleCorrect w : map.keySet()) {
             write_to_file_and_print(w + " -> " + map.get(w));
-            if(++i != size - 1)
+            if(i++ != size - 1)
                 write_to_file_and_print("\n");
         }
         write_to_file_and_print(ending);
@@ -85,7 +85,7 @@ public class Main {
         int i = 0;
         for (WaterBottleInCorrect w : map.keySet()) {
             write_to_file_and_print(w + " -> " + map.get(w));
-            if(++i != size - 1)
+            if(i++ != size - 1)
                 write_to_file_and_print("\n");
         }
         write_to_file_and_print(ending);
@@ -95,7 +95,7 @@ public class Main {
         write_to_file_and_print("Hashing in CorrectWatterBottle:");
         write_to_file_and_print(" \n\t~Default hashing is handled by java.");
         write_to_file_and_print("\n\t~Returns int value of the first char of the water brand.");
-        write_to_file_and_print("\n\t~eg: Hash(\"Smartwater\") == Hash(\"San Pellegrino\").");
+        write_to_file_and_print("\n\t~eg: Hash(\"Smartwater\") == Hash(\"San Pellegrino\") == 'S'.");
     }
 
     public static void write_to_file_and_print(String str) throws IOException {
