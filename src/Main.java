@@ -43,6 +43,7 @@ public class Main {
     public static void secureRandom(String alg, String ending) throws NoSuchAlgorithmException, IOException {
         String password = ".flopper123/?";
         SecureRandom random = new SecureRandom();
+        random.setSeed(password.getBytes());
         byte[] salt = new byte[16];
         random.nextBytes(salt);
         MessageDigest md = MessageDigest.getInstance(alg);
@@ -58,15 +59,15 @@ public class Main {
     }
 
     public static void correct_class_for_hashing(String ending) throws IOException {
-        HashMap<WaterBottleCorrect, String> map = new HashMap<>();
-        map.put(new WaterBottleCorrect("Evian", 1, "Litre"), "Evian");
-        map.put(new WaterBottleCorrect("Voss", 1, "Litre"), "Voss");
-        map.put(new WaterBottleCorrect("San Pellegrino", 1, "Litre"), "San Pellegrino");
-        map.put(new WaterBottleCorrect("Smartwater", 1, "Litre"), "Smartwater");
+        HashMap<WaterBottle_Correct, String> map = new HashMap<>();
+        map.put(new WaterBottle_Correct("Evian", 1, "Litre"), "Evian");
+        map.put(new WaterBottle_Correct("Voss", 1, "Litre"), "Voss");
+        map.put(new WaterBottle_Correct("San Pellegrino", 1, "Litre"), "San Pellegrino");
+        map.put(new WaterBottle_Correct("Smartwater", 1, "Litre"), "Smartwater");
 
         int size = map.keySet().size();
         int i = 0;
-        for (WaterBottleCorrect w : map.keySet()) {
+        for (WaterBottle_Correct w : map.keySet()) {
             write_to_file_and_print(w + " -> " + map.get(w));
             if(i++ != size - 1)
                 write_to_file_and_print("\n");
@@ -75,15 +76,15 @@ public class Main {
     }
 
     public static void incorrect_class_for_hashing(String ending) throws IOException {
-        HashMap<WaterBottleInCorrect, String> map = new HashMap<>();
-        map.put(new WaterBottleInCorrect("Evian", 1, "Litre"), "Evian");
-        map.put(new WaterBottleInCorrect("Voss", 1, "Litre"), "Voss");
-        map.put(new WaterBottleInCorrect("San Pellegrino", 1, "Litre"), "San Pellegrino");
-        map.put(new WaterBottleInCorrect("Smartwater", 1, "Litre"), "Smartwater");
+        HashMap<WaterBottle_InCorrect, String> map = new HashMap<>();
+        map.put(new WaterBottle_InCorrect("Evian", 1, "Litre"), "Evian");
+        map.put(new WaterBottle_InCorrect("Voss", 1, "Litre"), "Voss");
+        map.put(new WaterBottle_InCorrect("San Pellegrino", 1, "Litre"), "San Pellegrino");
+        map.put(new WaterBottle_InCorrect("Smartwater", 1, "Litre"), "Smartwater");
 
         int size = map.keySet().size();
         int i = 0;
-        for (WaterBottleInCorrect w : map.keySet()) {
+        for (WaterBottle_InCorrect w : map.keySet()) {
             write_to_file_and_print(w + " -> " + map.get(w));
             if(i++ != size - 1)
                 write_to_file_and_print("\n");

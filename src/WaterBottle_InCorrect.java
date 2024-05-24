@@ -1,7 +1,5 @@
-import java.util.Objects;
-
-public class WaterBottleInCorrect extends WaterBottleCorrect{
-    WaterBottleInCorrect(String brand, int volume, String measurementSystem) {
+public class WaterBottle_InCorrect extends WaterBottle_Correct {
+    WaterBottle_InCorrect(String brand, int volume, String measurementSystem) {
         super(brand, volume, measurementSystem);
     }
 

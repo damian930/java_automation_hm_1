@@ -1,11 +1,11 @@
 import java.util.Objects;
 
-public class WaterBottleCorrect {
+public class WaterBottle_Correct {
     private String brand;
     private int volume;
     private final String measurementSystem;
 
-    WaterBottleCorrect(String brand, int volume, String measurementSystem) {
+    WaterBottle_Correct(String brand, int volume, String measurementSystem) {
         this.brand = brand;
         this.volume = volume;
         this.measurementSystem = measurementSystem;
@@ -15,7 +15,7 @@ public class WaterBottleCorrect {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-        WaterBottleCorrect that = (WaterBottleCorrect) obj;
+        WaterBottle_Correct that = (WaterBottle_Correct) obj;
         return volume == that.volume &&
                 brand.equals(that.brand) &&
                 measurementSystem.equals(that.measurementSystem);
