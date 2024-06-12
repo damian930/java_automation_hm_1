@@ -15,20 +15,20 @@ MessageDigest(SHA-256):
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-SecureRandom + MessageDigest(MD5):
+SecureRandom + MessageDigest(SHA1PRNG):
 	Password: .flopper123/?
 	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
-	Hashed Password as bytes: [-71, 57, -21, -47, 86, -5, 75, -102, 16, 84, -12, 67, -3, -53, 115, 89]
+	Hashed Password as bytes: [31, 87, -70, -30, 80, -65, 123, -59, -18, 8, 64, -99, -103, 87, -3, 30]
 
-SecureRandom + MessageDigest(SHA-256):
+SecureRandom + MessageDigest(DRBG):
 	Password: .flopper123/?
 	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
-	Hashed Password as bytes: [108, -97, -3, -97, 27, -16, -112, -65, -123, 75, 26, -27, -67, -128, -44, -30, 102, -31, 21, -117, 85, 113, 89, -58, -28, -68, -101, -104, 22, -102, 99, 47]
+	Hashed Password as bytes: [45, -33, -40, -81, -39, -15, -31, 27, 127, 37, -8, -95, -41, 120, 109, -71]
 
-SecureRandom + MessageDigest(SHA-512):
+SecureRandom + MessageDigest(Windows-PRNG):
 	Password: .flopper123/?
 	Password as bytes: [46, 102, 108, 111, 112, 112, 101, 114, 49, 50, 51, 47, 63]
-	Hashed Password as bytes: [23, 80, -88, 126, -64, 126, 38, 67, 12, 92, -88, 74, 55, -31, -43, -110, 9, 22, 26, 108, 58, -82, 18, -54, -35, -110, -52, 71, 50, -52, -76, 15, -40, -12, 82, -56, 121, -59, -114, -114, -104, -33, 64, -92, 33, 81, 8, -116, -40, -107, -17, 111, 60, 126, -77, 38, 48, 3, 26, -47, 107, 61, -127, -122]
+	Hashed Password as bytes: [55, 39, 18, 103, 111, -44, -95, -55, -102, -73, 71, -78, -33, -35, -54, 53]
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -41,7 +41,8 @@ SecureRandom + MessageDigest(SHA-512):
 (Evian, 1, Litre) -> Evian
 (Voss, 1, Litre) -> Voss
 
-Hashing in CorrectWatterBottle: 
+Hashing in WatterBottle_Correct: 
 	~Default hashing is handled by java.
-	~Returns int value of the first char of the water brand.
-	~eg: Hash("Smartwater") == Hash("San Pellegrino") == 'S'.
+Hashing in WatterBottle_InCorrect: 
+	~Return int value of the first char of the brand. 
+	~e.g: SmartWater == San Pellegrino.

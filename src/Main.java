@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -17,13 +18,15 @@ public class Main {
         messageDigest("SHA-1", "\n\n");
         messageDigest("SHA-256", separator);
 
-        secureRandom("MD5", "\n\n");
-        secureRandom("SHA-256", "\n\n");
-        secureRandom("SHA-512", separator);
+        secureRandom("SHA1PRNG", "\n\n");
+        secureRandom("DRBG", "\n\n");
+        secureRandom("Windows-PRNG",  separator);
 
         correct_class_for_hashing("\n\n");
         incorrect_class_for_hashing("\n\n");
         print_hash_explanation();
+
+
 
     }
 
@@ -42,18 +45,15 @@ public class Main {
 
     public static void secureRandom(String alg, String ending) throws NoSuchAlgorithmException, IOException {
         String password = ".flopper123/?";
-        SecureRandom random = new SecureRandom();
+        SecureRandom random = SecureRandom.getInstance(alg);
         random.setSeed(password.getBytes());
-        byte[] salt = new byte[16];
-        random.nextBytes(salt);
-        MessageDigest md = MessageDigest.getInstance(alg);
-        md.update(salt);
-        byte[] secured_password = md.digest(password.getBytes(StandardCharsets.UTF_8));
+        byte[] arr = new byte[16];
+        random.nextBytes(arr);
 
         write_to_file_and_print("SecureRandom + MessageDigest(" + alg + "):");
         write_to_file_and_print("\n\tPassword: " + password);
         write_to_file_and_print("\n\tPassword as bytes: " + Arrays.toString(password.getBytes()));
-        write_to_file_and_print("\n\tHashed Password as bytes: " + Arrays.toString(secured_password));
+        write_to_file_and_print("\n\tHashed Password as bytes: " + Arrays.toString(arr));
 
         write_to_file_and_print(ending);
     }
@@ -93,10 +93,12 @@ public class Main {
     }
 
     public static void print_hash_explanation() throws IOException {
-        write_to_file_and_print("Hashing in CorrectWatterBottle:");
+        write_to_file_and_print("Hashing in WatterBottle_Correct:");
         write_to_file_and_print(" \n\t~Default hashing is handled by java.");
-        write_to_file_and_print("\n\t~Returns int value of the first char of the water brand.");
-        write_to_file_and_print("\n\t~eg: Hash(\"Smartwater\") == Hash(\"San Pellegrino\") == 'S'.");
+        write_to_file_and_print("\nHashing in WatterBottle_InCorrect:");
+        write_to_file_and_print(" \n\t~Return int value of the first char of the brand.");
+        write_to_file_and_print(" \n\t~e.g: SmartWater == San Pellegrino.");
+
     }
 
     public static void write_to_file_and_print(String str) throws IOException {
