@@ -1,0 +1,194 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="091896a4-c9fd-4873-a39c-19a777f5fe2f" name="Changes" comment="gitingone and 4 poms(parent pom and 3 sub modules)">
+      <change beforePath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/module_1/pom.xml" beforeDir="false" afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/module_1/pom.xml" afterDir="false" />
+      <change beforePath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/module_2/pom.xml" beforeDir="false" afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/module_2/pom.xml" afterDir="false" />
+      <change beforePath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/module_3/pom.xml" beforeDir="false" afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/module_3/pom.xml" afterDir="false" />
+      <change beforePath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/pom.xml" beforeDir="false" afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit3 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="${symbol_dollar}PROJECT_DIR${symbol_dollar}" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2hsNQi52IbVCtcFkJnz8uXV9l25" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "jdk.selected.JAVA_MODULE": "16",
+    "last_opened_file_path": "D:/Admin/Desktop/PR2_Ruban",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:${symbol_escape}Admin${symbol_escape}Desktop${symbol_escape}Collage year 2${symbol_escape}java automation${symbol_escape}${artifactId}${symbol_escape}module_1" />
+      <recent name="D:${symbol_escape}Admin${symbol_escape}Desktop${symbol_escape}Collage year 2${symbol_escape}java automation${symbol_escape}${artifactId}${symbol_escape}module_3${symbol_escape}src${symbol_escape}main${symbol_escape}resources" />
+      <recent name="D:${symbol_escape}Admin${symbol_escape}Desktop${symbol_escape}Collage year 2${symbol_escape}java automation${symbol_escape}${artifactId}" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="${package}" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.StringModifierUtil_Test">
+    <configuration name="FileReaderUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}" />
+      <option name="MAIN_CLASS_NAME" value="${package}.FileReaderUtilTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileReaderUtilTest.test_readResourcesAsString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}" />
+      <option name="MAIN_CLASS_NAME" value="${package}.FileReaderUtilTest" />
+      <option name="METHOD_NAME" value="test_readResourcesAsString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringModifierUtil_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}" />
+      <option name="MAIN_CLASS_NAME" value="${package}.StringModifierUtil_Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringModifierUtil_Test.test_addNumbersToChar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}" />
+      <option name="MAIN_CLASS_NAME" value="${package}.StringModifierUtil_Test" />
+      <option name="METHOD_NAME" value="test_addNumbersToChar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringModifierUtil_Test.test_multiplyString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}" />
+      <option name="MAIN_CLASS_NAME" value="${package}.StringModifierUtil_Test" />
+      <option name="METHOD_NAME" value="test_multiplyString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StringModifierUtil_Test" />
+        <item itemvalue="JUnit.StringModifierUtil_Test.test_multiplyString" />
+        <item itemvalue="JUnit.StringModifierUtil_Test.test_addNumbersToChar" />
+        <item itemvalue="JUnit.FileReaderUtilTest" />
+        <item itemvalue="JUnit.FileReaderUtilTest.test_readResourcesAsString" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:${symbol_escape}Users${symbol_escape}Admin${symbol_escape}AppData${symbol_escape}Roaming${symbol_escape}Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="091896a4-c9fd-4873-a39c-19a777f5fe2f" name="Changes" comment="" />
+      <created>1718378811070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718378811070</updated>
+    </task>
+    <task id="LOCAL-00001" summary="gitingone and 4 poms(parent pom and 3 sub modules)">
+      <created>1718382401406</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718382401406</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gitingone and 4 poms(parent pom and 3 sub modules)" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitingone and 4 poms(parent pom and 3 sub modules)" />
+  </component>
+</project>
